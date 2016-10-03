@@ -284,18 +284,18 @@ def user(uid):
             return abort(404)
 
     if not uid:
-        return jsonify({error: "Invalid uid"})
+        return jsonify({"error": "Invalid uid"})
 
 
-    user = User.query.filter(User.id == uid)
+    user = User.query.filter(User.id == uid).first()
 
     if user:
         name = user.name
         db.session.delete(user)
         db.session.commit()
-        return jsonify({success: "Deleted " + name})
+        return jsonify({"success": "Deleted " + name})
     else:
-        return jsonify({error: "Invalid uid"})
+        return jsonify({"error": "Invalid uid"})
 
 
 @app.route('/userinfo/<name>')
