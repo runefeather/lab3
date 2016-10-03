@@ -156,20 +156,18 @@ def index():
     return render_template('capstone.html', s=s)
 
 
-@app.route('/dashboard/<name>')
-
-
-# auth required
-def dashboard(name):
-    return render_template('dashboard.html', name=name)
+@app.route('/dashboard')
+@flask_login.login_required
+def dashboard():
+    return render_template('dashboard.html', name=flask_login.current_user.name)
 
 
 # API CALL 1
 @app.route('/updatedb', methods=["POST"])
+@flask_login.login_required
 def update():
     checked = request.form['selector']
-    username = request.form['user']
-    tochange = User.query.filter_by(name=username).first()
+    tochange = User.query.filter_by(id=flask_login.current_user.id).first()
     tochange.availability = checked
     db.session.commit()
     return jsonify({"availability": tochange.availability})
