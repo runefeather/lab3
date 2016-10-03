@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<head>
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/base.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/fonts_style.css')}}">
+  <!-- Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link href='https:http://www.dafont.com/kg-hard-candy.font'>
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Javascript -->
+  <script type="text/javascript" src="{{url_for('static', filename='javascript/functions.js')}}"></script>
+
+  <title>Time in color</title>
+</head>
+
+<!-- Calling the js function -->
+<body onload="callingAllFunctions()">
+
+  <!-- Here, the time, hex time and quote are made -->
+  <p id = 'colorInHex'> Hello, {{ name }}!</p>
+  <h1 id = 'time'></h1>
+  <p id = "quote"></p>
+
+  <!-- Side nav bar -->
+
+  <nav class="main-menu">
+    <ul>
+      <li>
+        <a href="/">
+          <i class="fa fa-home fa-2x"></i>
+          <span class="nav-text">
+            Home
+          </span>
+        </a>
+
+      </li>
+      <li class="has-subnav">
+        <a href="/feed">
+          <i class="fa fa-rss fa-2x"></i>
+          <span class="nav-text">
+            Very Cool Feed
+          </span>
+        </a>
+
+        <li class="has-subnav">
+          <a href="/logout">
+            <i class="fa fa-lock fa-2x"></i>
+            <span class="nav-text">
+              Logout
+            </span>
+          </a>
+
+        </li>
+      </ul>
+    </nav>
+  </body>
+  </html>

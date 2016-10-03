@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dashboard</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/base.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <h2>Hello, {{ name }}!</h2>
+    <h3> SET AVAILABILITY: </h3>
+    <div class="container">
+        <ul>
+            <form action="/updatedb" method="post">
+            <input type="text" value="{{name}}" style="visibility:hidden" name="user">
+            <!-- TODO: ADD NAME TO VALUE IN RADIO BUTTON -->
+                <li>
+                    <input type="radio" id="f-option" name="selector" value="Yes">
+                    <label for="f-option">Available</label>
+                    <div class="check"></div>
+                </li>
+                <li>
+                    <input type="radio" id="s-option" name="selector" value="No">
+                    <label for="s-option">Not Available</label>
+                    <div class="check">
+                        <div class="inside"></div>
+                    </div>
+                </li>
+                <li>
+                    <input type="submit" value="Submit" id="submitbtn">
+                </li>
+            </form>
+        </ul>
+    </div>
+</body>
+
+</html>
