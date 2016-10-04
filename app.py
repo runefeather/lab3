@@ -152,7 +152,7 @@ def index():
         l.append(user.availability)
         datalist.append(l)
 
-    s = {"title": ['Professor', 'Pillar', 'Availability'], "data": datalist}
+    s = {"title": ['PROFESSOR', 'PILLAR', 'AVAILABILITY'], "data": datalist}
     return render_template('capstone.html', s=s)
 
 

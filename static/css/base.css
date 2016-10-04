@@ -1,5 +1,4 @@
 @import url('http://fonts.googleapis.com/css?family=Lato');
-
 h1 {
     text-align: center;
     margin-top: 40px;
@@ -35,14 +34,13 @@ p {
     text-align: justify;
 }
 
-#step{
+#step {
     color: #0DFF92;
 }
 
-#content{
+#content {
     color: #AAAAAA;
 }
-
 
 #capstone101 {
     margin-top: 50px;
@@ -60,10 +58,19 @@ p {
     transition: all .1s linear;
 }
 
-#tablething{
-    display: table;
+table {
     border-collapse: collapse;
-    align-content: center;
+    display: table;
+    border-bottom: 20px;
+}
+
+td {
+    color: #FFFAF0;
+    border-bottom: 1px solid #cecfd5;
+    padding: 10px 25px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
 }
 
 body,
@@ -110,7 +117,6 @@ ul li input[type=radio] {
     position: absolute;
     visibility: hidden;
 }
-
 
 ul li label {
     display: block;
@@ -174,9 +180,9 @@ input[type=radio]:checked ~ label {
 }
 
 input[type=submit] {
-    background:#222222;
-    border:0 none;
-    cursor:pointer;
+    background: #222222;
+    border: 0 none;
+    cursor: pointer;
     margin: 25px 25px 25px 70px;
     font-size: 30px;
     color: #0DFF92;
